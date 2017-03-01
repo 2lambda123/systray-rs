@@ -10,7 +10,13 @@ extern crate kernel32;
 extern crate user32;
 #[cfg(target_os = "windows")]
 extern crate shell32;
-#[cfg(target_os = "windows")]
+
+#[cfg(target_os = "macos")]
+extern crate cocoa;
+#[cfg(target_os = "macos")]
+#[macro_use]
+extern crate objc;
+
 extern crate libc;
 
 pub mod api;

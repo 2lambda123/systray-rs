@@ -5,14 +5,13 @@ authors = ["Kyle Machulis <kyle@machul.is>"]
 
 [dependencies]
 log = "*"
+libc = "*"
 
 [target.'cfg(target_os = "windows")'.dependencies]
 kernel32-sys = { git = "https://github.com/application-developer-DA/winapi-rs.git", branch = "0.2" }
 shell32-sys = { git = "https://github.com/application-developer-DA/winapi-rs.git", branch = "0.2" }
 user32-sys = { git = "https://github.com/application-developer-DA/winapi-rs.git", branch = "0.2" }
 winapi = { git = "https://github.com/application-developer-DA/winapi-rs.git", branch = "0.2" }
-
-libc = "*"
 
 [target.'cfg(target_os = "macos")'.dependencies]
 objc = "*"
